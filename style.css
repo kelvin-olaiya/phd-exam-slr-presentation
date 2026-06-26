@@ -177,6 +177,104 @@
   line-height: 1.38;
 }
 
+.duality-band {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 0.85rem;
+  align-items: center;
+  margin: -0.1rem 0 0.95rem;
+}
+
+.duality-band > div {
+  min-height: 72px;
+  padding: 0.82rem 0.95rem;
+  border: 1px solid var(--hri-line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.76);
+}
+
+.duality-band span {
+  display: block;
+  margin-bottom: 0.18rem;
+  color: var(--hri-coral);
+  font-size: 0.72rem;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+.duality-band strong {
+  display: block;
+  font-size: 1.04rem;
+  line-height: 1.18;
+}
+
+.duality-band svg {
+  width: 1.8rem;
+  height: 1.8rem;
+  color: var(--hri-cyan);
+}
+
+.learning-duality {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.82rem;
+}
+
+.learning-duality > div {
+  min-height: 180px;
+  padding: 0.95rem 1rem;
+  background: var(--hri-panel);
+  border: 1px solid var(--hri-line);
+  border-radius: 8px;
+  box-shadow: 0 14px 34px rgba(24, 33, 47, 0.06);
+}
+
+.learning-duality .learning-current {
+  border-color: rgba(46, 125, 91, 0.32);
+  background: rgba(46, 125, 91, 0.08);
+}
+
+.learning-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 2.25rem;
+  margin-bottom: 0.62rem;
+  color: var(--hri-cyan);
+  font-size: 0.96rem;
+  font-weight: 850;
+  line-height: 1.18;
+}
+
+.learning-title svg {
+  flex: 0 0 auto;
+  width: 1.32rem;
+  height: 1.32rem;
+  color: var(--hri-coral);
+}
+
+.learning-current .learning-title {
+  color: var(--hri-green);
+}
+
+.learning-duality p {
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.35;
+}
+
+.transition-claim {
+  margin-top: 0.9rem;
+  padding: 0.72rem 0.9rem;
+  border: 1px solid var(--hri-line);
+  border-left: 5px solid var(--hri-green);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.76);
+  color: var(--hri-muted);
+  font-size: 0.84rem;
+  line-height: 1.35;
+}
+
 .agenda-grid,
 .picoc-grid,
 .dimension-grid,
@@ -470,7 +568,7 @@
   position: relative;
   display: grid;
   place-items: center;
-  min-height: 104px;
+  min-height: 50px;
   padding: 1rem;
   overflow: hidden;
   text-align: center;
@@ -487,8 +585,8 @@
 .source-icon {
   display: grid;
   place-items: center;
-  width: 2.3rem;
-  height: 2.3rem;
+  width: 1.5rem;
+  height: 1.5rem;
   margin-bottom: 0.55rem;
   border-radius: 8px;
   background: rgba(27, 138, 154, 0.12);
@@ -496,14 +594,14 @@
 }
 
 .source-icon svg {
-  width: 1.35rem;
-  height: 1.35rem;
+  width: 1rem;
+  height: 1rem;
 }
 
 .source-grid strong {
   display: block;
   color: var(--hri-ink);
-  font-size: 1.04rem;
+  font-size: 0.8rem;
   line-height: 1.1;
 }
 

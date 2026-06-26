@@ -60,7 +60,7 @@ Human-Robot Interaction (HRI) studies how humans and embodied robots perceive, c
 <div class="scope-grid">
   <div>
     <strong>Timespan</strong>
-    <p>The 2020-2026 period captures the shift from classical ML and modular autonomy toward LLM/VLM-mediated planning, dialogue, perception, and adaptation.</p>
+    <p>The 2020–2026 period marks a transition from traditional pipeline-based autonomous systems and classical AI/ML methods toward LLM/VLM-driven<sup>1</sup> systems for planning, perception, dialogue, and adaptation.</p>
   </div>
   <div>
     <strong>Concrete example</strong>
@@ -72,28 +72,45 @@ Human-Robot Interaction (HRI) studies how humans and embodied robots perceive, c
   </div>
 </div>
 
+<p>
+<sup>1</sup> LLM: Large Language Model; VLM: Vision-Language Model;
+</p>
+
 ---
-class: genai-slide
+class: robot-learning-slide
 ---
 
-## Why foundation models matter
+## Robot learning approaches
 
-<div class="model-shift">
+<div class="duality-band">
   <div>
-    <carbon-idea />
-    <strong>Language as interface</strong>
-    <p>LLMs make task specification, clarification, and dialogue policies more flexible than scripted interaction.</p>
+    <span>Traditionally</span>
+    <strong>Task-specific learning loops</strong>
+  </div>
+  <carbon-arrow-right />
+  <div>
+    <span>Shifting towards</span>
+    <strong>Foundation-model mediated adaptation</strong>
+  </div>
+</div>
+
+<div class="learning-duality">
+  <div>
+    <div class="learning-title"><carbon-user-speaker />Teaching, imitation, teleoperation</div>
+    <p>Robots learn from demonstrations or direct human control, but require labeled behavior data, specialized interfaces, and user training.</p>
   </div>
   <div>
-    <carbon-image-search />
-    <strong>Grounded perception</strong>
-    <p>VLMs connect language to objects, scenes, affordances, and human actions in shared environments.</p>
+    <div class="learning-title"><carbon-machine-learning-model />Reinforcement learning</div>
+    <p>Policies can exceed demonstrations, yet complex reward design, exploration, convergence, and instability remain major bottlenecks.</p>
   </div>
-  <div>
-    <carbon-decision-tree />
-    <strong>Planning bridge</strong>
-    <p>Foundation models can translate intent into task plans, while classical robotics still handles constraints, motion, and safety.</p>
+  <div class="learning-current">
+    <div class="learning-title"><carbon-ibm-watson-discovery />LLM/VLM foundation models</div>
+    <p>Large multi-domain priors support zero-shot reasoning, task understanding, and multimodal grounding across text, speech, and vision.</p>
   </div>
+</div>
+
+<div class="transition-claim">
+  The shift is from <strong>programming or training each behavior</strong> toward <strong>using broad priors to interpret goals, plan, and adapt</strong> in changing HRI environments.
 </div>
 
 --- 
@@ -103,27 +120,27 @@ class: genai-slide
 <div class="picoc-cards">
   <div class="picoc-card">
     <div class="picoc-title"><carbon-user-multiple />Population</div>
-    <p>Studies of physical robotic systems (humanoids, cobots, mobile/service robots) and related HRI/CS literature from 2020-2026. Simulation-only work is included only when it targets embodied robotic interaction.</p>
+    <p><strong>Studies of physical robotic systems</strong> (humanoids, cobots, mobile/service robots) and human-robot interaction<i>. Simulation-only work</i> is included only when it targets embodied robotic interaction.</p>
   </div>
 
   <div class="picoc-card">
     <div class="picoc-title"><carbon-machine-learning-model />Intervention</div>
-    <p>Computational methods for HRI, including classical ML, deep learning, reinforcement learning, and foundation models (LLMs, VLMs), applied to perception, planning, dialogue, control, and adaptation.</p>
+    <p><strong>AI-based computational methods for robot decision-making in HRI</strong>, including classical ML, deep learning, reinforcement learning, and foundation models (LLMs, VLMs), applied to <u>planning, control and policy generation</u>.</p>
   </div>
 
   <div class="picoc-card">
     <div class="picoc-title"><carbon-compare />Comparison</div>
-    <p>Contrasts modern data-driven and generative-AI HRI methods with traditional baselines, and distinguishes simulation-only studies from real-world deployments.</p>
+    <p>Traditional rule-base, model-based approaches or non-generative methods.</p>
   </div>
 
   <div class="picoc-card">
     <div class="picoc-title"><carbon-chart-evaluation />Outcome</div>
-    <p>Evaluation criteria across system performance, interaction quality, and human-centered outcomes such as trust, workload, safety, predictability, and legibility.</p>
+    <p>Evaluation criteria across <u>interaction quality, and human-centered outcomes</u> (i.e., trust, workload, safety, predictability, and legibility).</p>
   </div>
 
   <div class="picoc-card picoc-card-wide">
     <div class="picoc-title"><carbon-earth />Context</div>
-    <p>Categorises study settings (industrial, service, healthcare, hazardous) and evaluation modalities (lab, field, simulation) to assess validity and generalizability of HRI findings.</p>
+    <p>Categorises study settings (industrial, service, healthcare, hazardous environments) and evaluation modalities (lab, field, simulation) to assess validity and generalizability of HRI findings.</p>
   </div>
 </div>
 
@@ -140,11 +157,11 @@ class: rq-slide
 </div>
 
 <div class="rq-cards">
-  <div class="rq-card"><span>01</span><p>Which robotic platforms, system classes, and HRI taxonomies are most frequently studied in primary HRI research?</p></div>
-  <div class="rq-card"><span>02</span><p>Which computational approaches are used at the levels of perception, planning, dialogue, control, and adaptation?</p></div>
-  <div class="rq-card"><span>03</span><p>How do learning-based and AI-driven HRI approaches compare with traditional methodologies on outcome metrics and engineering trade-offs?</p></div>
-  <div class="rq-card"><span>04</span><p>What evaluation metrics and assessment frameworks are used in HRI studies?</p></div>
-  <div class="rq-card"><span>05</span><p>In which application domains and operational contexts are HRI systems developed and evaluated?</p></div>
+  <div class="rq-card"><span>01</span><p>Which physical robotic systems and HRI taxonomies are most frequently studied in primary HRI research?</p></div>
+  <div class="rq-card"><span>02</span><p>Which AI-based computational approaches are used at the levels of planning, control and policy generation?</p></div>
+  <div class="rq-card"><span>03</span><p>How do AI-driven HRI approaches compare with rule-based, model-based and non-generative approaches on evaluation metrics?</p></div>
+  <div class="rq-card"><span>04</span><p>What is the Autonomy/HITL structure of the robotic systems, (e.g. human as operator, advisor, teacher, supervisor, collaborator or beneficiary) and what is the interaction paradigm that is used?</p></div>
+  <div class="rq-card"><span>05</span><p>What evaluation metrics and assessment frameworks are used in HRI studies?</p></div>
   <div class="rq-card"><span>06</span><p>What are the recurring limitations, ethical concerns, and open research gaps in HRI studies?</p></div>
 </div>
 
@@ -182,9 +199,19 @@ class: criteria-slide
 
 <div class="criteria-bottom">
 
-<p><strong>Peer-reviewed scope:</strong> major archival venues such as <strong>ICRA, IROS, RSS, CoRL, ACM/IEEE HRI, RO-MAN, RA-L, T-RO, IJRR, Science Robotics</strong>.</p>
+<strong>Peer-reviewed scope:</strong>
 
-<p><strong>Window rationale:</strong> 2020-2026 captures modern learning-based HRI and the foundation-model shift. <strong>Additional rule:</strong> backward/forward snowballing may add relevant primary studies; surveys and taxonomies are used only as mapping sources.</p>
+The following venues are where the majority of influential robotics and HRI research is published. They are highly selective and use expert reviewers from the robotics community.
+
+* **Primary HRI venues**: ACM/IEEE HRI, RO-MAN
+* **General robotics venues**: ICRA, IROS
+* **Robot learning and embodied AI venues**: CoRL, RSS
+* **High impact robotics journals**: RA-L, T-RO, IJRR, Science Robotics
+
+<p></p>
+
+
+<p> <strong>Additional rule:</strong> backward/forward snowballing may add relevant primary studies (possibly from other venues); surveys and taxonomies are used only as mapping sources.</p>
 
 </div>
 
@@ -234,40 +261,27 @@ class: search-slide
 ## Sources extraction and databases
 
 ```txt
-("human-robot interaction" OR HRI OR "human robot collaboration")
-AND
-(robot* OR humanoid OR cobot* OR "mobile robot*" OR "service robot*")
-AND
-("machine learning" OR "deep learning" OR "reinforcement learning" 
- OR "large language model*" OR LLM OR "vision-language model*" OR VLM 
- OR "foundation model*" OR "generative AI" OR diffusion)
-AND
-(planning OR "motion planning" OR manipulation OR "task planning" 
- OR "social robotics" OR "cognitive robotics")
-AND
-(simulation OR "user study" OR "real-world" OR deployment OR experiment*)
+(HRI OR "human-robot interaction" OR "human-robot collaboration") AND
+(robot* OR humanoid* OR cobot* OR "service robot*" OR "mobile robot*") AND
+
+(
+  "machine learning" OR "deep learning" OR
+  "reinforcement learning" OR
+  "foundation model*" OR LLM* OR VLM* OR
+  "generative AI"
+) AND
+
+(planning OR control OR "decision making" OR "policy generation")
 ```
 
-<ul class="source-grid">
-  <li>
-    <div class="source-icon"><carbon-catalog /></div>
-    <strong>Scopus</strong>
-  </li>
-  <li>
-    <div class="source-icon"><carbon-chip /></div>
-    <strong>IEEE Xplore</strong>
-  </li>
-  <li>
-    <div class="source-icon"><carbon-cics-program /></div>
-    <strong>ACM Digital Library</strong>
-  </li>
-</ul>
+The query derives from the Population and Intervention components of PICOC. Each term has been expanded with common synonyms and wildcards to capture variations in terminology.
+Other PICOC components are excluded to avoid missing those studies that do not explicitly state them in their title or abstract.
+
+**Database sources**: Scopus, IEEE Xplore, ACM Digital Library.
 
 <div class="search-result-note">
-  <strong>Early search check:</strong> Scopus 659, IEEE Xplore 461, ACM Digital Library 2685. ACM likely needs query refinement.
+  <strong>Early search check:</strong> Scopus 2,068, IEEE Xplore 2,053, ACM Digital Library 2,371. Due to the large number of results, further refinement of the search strategy may be necessary.
 </div>
-
-Deduplication is performed at **record-level** and **study-level**. Backward snowballing scans references of included papers; forward snowballing checks later citing primary studies for high-relevance additions.
 
 ---
 class: pipeline-slide
@@ -298,12 +312,11 @@ class: extraction-slide
 **Extraction dimensions:**
 
 <ol class="dimension-grid">
-  <li><strong>Application Domain:</strong> industrial/collaborative, service/hospitality, social/assistive, healthcare, hazardous.</li>
   <li><strong>AI / ML & Foundation-Model Stack:</strong> classical ML/DL, RL/IL for control, LLM/VLM, hybrid architectures.</li>
   <li><strong>Robotic Platforms:</strong> humanoid/anthropomorphic, manipulators/cobots, mobile/ground robots</li>
-  <li><strong>Robotic Focus Area:</strong> task/motion planning, manipulation, physical interaction, language grounding.</li>
+  <li><strong>Robotic Focus Area:</strong> task/motion planning, manipulation, physical interaction</li>
   <li><strong>Evaluation Setting:</strong> simulation-only, real robot without participants, lab study, field deployment.</li>
-  <li><strong>Interaction Paradigm:</strong> teleoperation/direct control, shared autonomy, mixed initiative, dialogue, grounded instruction.</li>
+  <li><strong>Interaction Paradigm:</strong> teleoperation/direct control, shared autonomy, dialogue, grounded instruction.</li>
   <li><strong>Autonomy / HITL Structure:</strong> human as operator, advisor, teacher, supervisor, collaborator, or beneficiary.</li>
 </ol>
 
@@ -313,29 +326,16 @@ class: extraction-table-slide
 
 ## Draft extraction table
 
-| Field | Example value |
+| Extraction dimension | Example / extraction fields |
 |---|---|
-| Platform | mobile service robot, cobot arm, humanoid |
-| AI method | LLM planner, VLM grounding, RL controller |
-| Technical layer | perception, planning, dialogue, control, adaptation |
-| Evaluation setting | simulation, lab study, real robot, field deployment |
-| Metrics | success rate, latency, recovery, trust, workload |
-| Evidence quality | baseline, ablation, participants, artifacts |
-
----
-class: taxonomy-slide
----
-
-## Taxonomy preview
-
-<div class="taxonomy-grid">
-  <div><strong>Domain</strong><p>industrial, service, healthcare, hazardous, social/assistive</p></div>
-  <div><strong>Platform</strong><p>humanoid, manipulator/cobot, mobile robot, multi-robot system</p></div>
-  <div><strong>Method</strong><p>classical ML, DL, RL/IL, LLM, VLM, diffusion, hybrid stack</p></div>
-  <div><strong>Interaction</strong><p>teleoperation, shared autonomy, dialogue, instruction following, collaboration</p></div>
-  <div><strong>Evaluation</strong><p>simulation, benchmark, lab user study, real-world deployment</p></div>
-  <div><strong>Autonomy role</strong><p>operator, teacher, supervisor, collaborator, beneficiary</p></div>
-</div>
+| AI / ML & Foundation-Model Stack | classical ML/DL; RL/IL for control; LLM, VLM; hybrid architectures; model names, training/fine-tuning, prompting details |
+| Robotic Platforms | humanoid/anthropomorphic; manipulator/cobot; mobile/ground robot |
+| Robotic Focus Area | task/motion planning; manipulation; physical interaction; navigation |
+| Evaluation Setting | simulation-only; real robot without participants; lab study; field deployment |
+| Interaction Paradigm | teleoperation/direct control; shared autonomy; dialogue; grounded instruction |
+| Autonomy / HITL Structure | human as operator, advisor, teacher, supervisor, collaborator, beneficiary |
+| Metrics | success rate, task completion, latency, recovery, safety incidents |
+| Evidence quality & artifacts | baseline, ablation, participant data, code, datasets, prompts, videos, supplementary materials |
 
 ---
 class: synthesis-slide
@@ -407,5 +407,4 @@ class: conclusion-slide
   <div><carbon-table /> <span>Evidence base</span><p>Extract platforms, methods, metrics, contexts, and deployment maturity.</p></div>
   <div><carbon-map /> <span>Synthesis</span><p>Produce a taxonomy and gap map for future related-work writing.</p></div>
 </div>
-
 
